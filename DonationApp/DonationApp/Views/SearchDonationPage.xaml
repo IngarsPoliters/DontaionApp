@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonationApp.Views.SearchDonationPage">
+    <ContentPage.Content>
+        <ListView x:Name="itemListView" HeightRequest="400"  ItemTapped="ItemListView_ItemTapped" >
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <!--Binding at work, binds the organization name to the text and county to detail-->
+                    <TextCell Text="{Binding OrganizationName}" 
+                               Detail="{Binding county}"
+                              />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

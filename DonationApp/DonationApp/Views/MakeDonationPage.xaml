@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonationApp.Views.MakeDonationPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20, 0 , 20 ,0 " VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <StackLayout Grid.Row="0">
+                        <Label Text="Name of Organisation"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1">
+                        <Entry Placeholder="Name" x:Name="EntryOrganisation"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
+                        <Label Text="Item Description" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3">
+                        <Entry Placeholder="Description" x:Name="EntryDescription" HeightRequest="100"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4">
+                        <Label Text="Contact Information"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="5">
+                        <Entry Placeholder="Contact Info" x:Name="EntryContact" Keyboard="Numeric"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="6">
+                        <Label Text="Location by County"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="7">
+                        <Picker Title="Select a County" x:Name="CountyPicker" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="8">
+                        <Label Text="Upload Image"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="9">
+                        <Button Text="Pick a Photo"  CornerRadius="5"
+                                Clicked="ImageBtn_Clicked"/>
+                        <Image x:Name="image" WidthRequest="125" HeightRequest="125" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="10">
+                        <Button Text="Donate" BackgroundColor="Red"  CornerRadius="5" TextColor="White"
+                                Clicked="DonateBtn_Clicked"/>
+                    </StackLayout>
+
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

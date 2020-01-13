@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonationApp.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20, 0 , 20 ,0 " VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Entry Placeholder="Username" x:Name="EntryUsername" Grid.Row="0"/>
+                    <Entry Placeholder="Password" x:Name="EntryPassword" IsPassword="True" Grid.Row="1"/>
+                    <Button Text="Login" Grid.Row="2"  CornerRadius="5" BackgroundColor="Red" TextColor="White" Clicked="LoginBtn_Clicked"/>
+                    <Button Text="Signup" Grid.Row="3"  CornerRadius="5" Clicked="SignupBtn_Clicked"/> 
+
+                </Grid>
+            </StackLayout>
+            
+        </ScrollView>
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>
